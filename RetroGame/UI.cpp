@@ -60,6 +60,7 @@ void UI::DisplayInventory()
 
 void UI::DisplayInfotip()
 {
+	/*
 	// Go thru all objects on the map
 	for (auto i = _Objects->begin(); i != _Objects->end(); i++) // Go through all world objects
 	{
@@ -67,7 +68,7 @@ void UI::DisplayInfotip()
 		if (i->second.IsHover(GetMousePosition()))
 		{
 			// Display object infotip
-			UI_Infotip tip(T_Infotip, i->second.getPosition(), i->second.GetName(), "text");
+			UI_Infotip tip(T_Infotip,_Font, i->second.getPosition(), i->second.GetName(), "text");
 			_Window->draw(tip);
 		}
 		
@@ -88,12 +89,12 @@ void UI::DisplayInfotip()
 				if (obj->IsHover(GetMousePosition()))
 				{
 					// Display object info tip
-					UI_Infotip tip(T_Infotip, obj->getPosition(), obj->GetName(), "text");
+					UI_Infotip tip(T_Infotip, _Font, obj->getPosition(), obj->GetName(), "text");
 					_Window->draw(tip);
 				}
 			}
 		}
-	}
+	}*/
 }
 
 Vector2f UI::GetMousePosition()
