@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "CPosition.h"
-#include "CInfotip.h"
+#include "UI_Infotip.h"
 #include <string>
 
 

@@ -6,12 +6,12 @@
 using namespace std;
 using namespace sf;
 
-class CInfoTip : public Sprite
+class UI_Infotip : public Sprite
 {
 	string _Title;
 	string _Text;
 public:
-	CInfoTip(Texture& texture, CPosition pos, string title, string text);
+	UI_Infotip(Texture& texture, CPosition pos, string title, string text);
 	/*CInfoTip(CPlayer player);
 	CInfoTip(CMonster mob);*/
 

@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "CInfotip.h"
+#include "UI_Infotip.h"
 
-CInfoTip::CInfoTip(Texture& texture, CPosition pos, string title, string text)
+UI_Infotip::UI_Infotip(Texture& texture, CPosition pos, string title, string text)
 {
 	// Ajuste position 
 	pos.x = pos.x + 15;
@@ -12,22 +12,22 @@ CInfoTip::CInfoTip(Texture& texture, CPosition pos, string title, string text)
 	this->SetText(text);
 }
 
-string CInfoTip::GetTitle() const
+string UI_Infotip::GetTitle() const
 {
 	return _Title;
 }
 
-string CInfoTip::GetText() const
+string UI_Infotip::GetText() const
 {
 	return _Text;
 }
 
-void CInfoTip::SetTitle(string title)
+void UI_Infotip::SetTitle(string title)
 {
 	_Title = title;
 }
 
-void CInfoTip::SetText(string text)
+void UI_Infotip::SetText(string text)
 {
 	_Text = text;
 }

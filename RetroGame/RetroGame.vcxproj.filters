@@ -48,9 +48,6 @@
     <ClInclude Include="UI_Inventory.h">
       <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="CInfotip.h">
-      <Filter>Header Files\UI</Filter>
-    </ClInclude>
     <ClInclude Include="CGame.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
@@ -81,6 +78,12 @@
     <ClInclude Include="CZombie.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
+    <ClInclude Include="UI_Component.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_Infotip.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -104,9 +107,6 @@
     <ClCompile Include="CCharacter.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
-    <ClCompile Include="CInfotip.cpp">
-      <Filter>Source Files\UI</Filter>
-    </ClCompile>
     <ClCompile Include="CInventory.cpp">
       <Filter>Source Files\Object</Filter>
     </ClCompile>
@@ -127,6 +127,12 @@
     </ClCompile>
     <ClCompile Include="CZombie.cpp">
       <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Component.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Infotip.cpp">
+      <Filter>Source Files\UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -162,7 +162,7 @@
     <ClInclude Include="CAnimation.h" />
     <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CGame.h" />
-    <ClInclude Include="CInfotip.h" />
+    <ClInclude Include="UI_Infotip.h" />
     <ClInclude Include="CInventory.h" />
     <ClInclude Include="CMap.h" />
     <ClInclude Include="CZombie.h" />
@@ -172,13 +172,14 @@
     <ClInclude Include="CPosition.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="UI_Component.h" />
     <ClInclude Include="UI_Inventory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAnimation.cpp" />
     <ClCompile Include="CCharacter.cpp" />
     <ClCompile Include="CGame.cpp" />
-    <ClCompile Include="CInfotip.cpp" />
+    <ClCompile Include="UI_Infotip.cpp" />
     <ClCompile Include="CInventory.cpp" />
     <ClCompile Include="CMap.cpp" />
     <ClCompile Include="CZombie.cpp" />
@@ -194,6 +195,7 @@
     </ClCompile>
     <ClCompile Include="RetroGame.cpp" />
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UI_Component.cpp" />
     <ClCompile Include="UI_Inventory.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -67,7 +67,7 @@ void UI::DisplayInfotip()
 		if (i->second.IsHover(GetMousePosition()))
 		{
 			// Display object infotip
-			CInfoTip tip(T_Infotip, i->second.getPosition(), i->second.GetName(), "text");
+			UI_Infotip tip(T_Infotip, i->second.getPosition(), i->second.GetName(), "text");
 			_Window->draw(tip);
 		}
 		
@@ -88,7 +88,7 @@ void UI::DisplayInfotip()
 				if (obj->IsHover(GetMousePosition()))
 				{
 					// Display object info tip
-					CInfoTip tip(T_Infotip, obj->getPosition(), obj->GetName(), "text");
+					UI_Infotip tip(T_Infotip, obj->getPosition(), obj->GetName(), "text");
 					_Window->draw(tip);
 				}
 			}
