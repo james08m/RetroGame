@@ -1,0 +1,78 @@
+////////////////////////////////////////////////////////////
+// Personnage.h
+// Déclaration de la classe CPersonnage héritant de CAnimation
+// 
+//
+// James Major 
+// Création: 14 mai 2014
+////////////////////////////////////////////////////////////
+#pragma once
+
+#include "CAnimation.h"
+#include "CPosition.h"
+#include "CMap.h"
+#include "CInventory.h"
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class CPersonnage : public CAnimation
+{
+	// Attributs
+	string Nom_;
+	int Vie_;
+	int Attaque_;
+	int Defense_;
+	int Magie_;
+	CInventory* _Inventory;
+
+public:
+	////////////////////////////////////////////////////////////
+	// Constructeur
+	////////////////////////////////////////////////////////////
+	CPersonnage(sf::Texture& texture, const CPosition& pos, string nom, int vie, int attaque, int defense, int magie);
+
+	////////////////////////////////////////////////////////////
+	// Deplacer
+	////////////////////////////////////////////////////////////
+	virtual bool Deplacer(CMap& carte) = 0;
+
+	////////////////////////////////////////////////////////////
+	// Prendre
+	////////////////////////////////////////////////////////////
+	bool Prendre(CObject objet);
+
+	////////////////////////////////////////////////////////////
+	// Use the object passed in parameter
+	////////////////////////////////////////////////////////////
+	bool UseObject(int index);
+
+	////////////////////////////////////////////////////////////
+	// Attack
+	////////////////////////////////////////////////////////////
+	bool Attack(CPersonnage& personnage);
+
+	////////////////////////////////////////////////////////////
+	// IsHover
+	////////////////////////////////////////////////////////////
+	bool IsHover();
+
+	// Accesseurs et mutateurs des attributs
+	string GetNom() const;
+	int GetVie() const;
+	int GetAttaque() const;
+	int GetDefense() const;
+	int GetMagie() const;
+
+	// Can acces the inventory and his methods(not constant)
+	CInventory* GetInventory();
+
+	void SetNom(string nom);
+	void SetVie(int vie);
+	void SetAttaque(int attaque);
+	void SetDefense(int defense);
+	void SetMagie(int magie);
+};
+
+ostream& operator<<(ostream& os, const CPersonnage& Personnage);
