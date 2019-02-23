@@ -37,25 +37,34 @@ bool CCharacter::Take(CObject objet)
 ////////////////////////////////////////////////////////////
 bool CCharacter::UseObject(CObject* obj)
 {
-	// Get object life bonus
-	if (this->GetLife() + obj->GetHeal() <= this->GetMaxLife())
-		this->SetLife(this->GetLife() + obj->GetHeal());
+	// Check cooldown clock and character cooldown value
+	if (_Clock.getElapsedTime() > this->GetCooldown())
+	{
+		// Restart character cooldown clock
+		_Clock.restart();
+
+		// Get object life bonus
+		if (this->GetLife() + obj->GetHeal() <= this->GetMaxLife())
+			this->SetLife(this->GetLife() + obj->GetHeal());
+		else
+			this->SetLife(this->GetMaxLife());
+
+		// Get object magic bonus
+		if (this->GetMagic() + obj->GetMagic() <= this->GetMaxMagic())
+			this->SetMagic(this->GetMagic() + obj->GetMagic());
+		else
+			this->SetMagic(this->GetMaxMagic());
+
+		// Get others object bonus
+		this->SetAttack(this->GetAttack() + obj->GetAttack());
+		this->SetDefense(this->GetDefense() + obj->GetDefense());
+
+		// Delete the object
+		_Inventory->RemoveObject(obj);
+		return true;
+	}
 	else
-		this->SetLife(this->GetMaxLife());
-
-	// Get object magic bonus
-	if (this->GetMagic() + obj->GetMagic() <= this->GetMaxMagic())
-		this->SetMagic(this->GetMagic() + obj->GetMagic());
-	else
-		this->SetMagic(this->GetMaxMagic());
-
-	// Get others object bonus
-	this->SetAttack(this->GetAttack() + obj->GetAttack());
-	this->SetDefense(this->GetDefense() + obj->GetDefense());
-
-	// Delete the object
-	_Inventory->RemoveObject(obj);
-	return true;
+		return false;
 }
 
 ////////////////////////////////////////////////////////////
