@@ -60,7 +60,7 @@ void UI::DisplayInventory()
 
 void UI::DisplayInfotip()
 {
-	/*
+	
 	// Go thru all objects on the map
 	for (auto i = _Objects->begin(); i != _Objects->end(); i++) // Go through all world objects
 	{
@@ -94,7 +94,7 @@ void UI::DisplayInfotip()
 				}
 			}
 		}
-	}*/
+	}
 }
 
 Vector2f UI::GetMousePosition()

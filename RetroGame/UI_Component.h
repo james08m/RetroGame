@@ -1,13 +1,12 @@
 #pragma once
-
-#include "CPlayer.h"
+#include "CPosition.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 using namespace sf;
 
-class UI_Component : public sf::Sprite
+class UI_Component : public Sprite
 {
 protected:
 	// Attribute 

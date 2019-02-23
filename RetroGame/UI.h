@@ -2,6 +2,7 @@
 #include <map>
 #include "CPosition.h"
 #include "UI_Inventory.h"
+#include "UI_Infotip.h"
 
 
 class UI
